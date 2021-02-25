@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="eng-US">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Intro to HTML/CSS</title>
+    <link rel="stylesheet" href="../resources/css/styles.css">
+</head>
+
+<body>
+
+    <nav class="navigation-wrapper">
+        <div class="left">
+            <div class="nav-link-wrapper">
+                <a href="../index.html">&lt;&lt; abanthia.co</a>
+            </div>
+            <div class="nav-link-wrapper">
+                <a href="../posts.html">Posts</a>
+            </div>
+            <div class="nav-link-wrapper">
+                <a href="../projects.html">Projects</a>
+            </div>
+            <div class="nav-link-wrapper">
+                <a href="../about.html">About</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <article class="post">
+            <div class="heading">
+                <h1>Introduction to HTML</h1>
+                <time style="font-family: monospace;">December 2020</time>
+            </div>
+            <hr>
+            <p>HTML stands for Hypertext Markup Language. Initially launched in 1993 and currently on v5, it is the main
+                markup language used for webpage building. It is developed and maintained by the World Wide Web
+                Consortium (W3C) and the Web Hypertext Application Technology Working Group (WHATWG). There are two
+                standards (from the two different groups) but both are quite similar.</p>
+            <p>In order to start creating with HTML, you need the following:</p>
+            <ul>
+                <li>Computer (you probably have one if you're reading this)</li>
+                <li>Text editor to write the code (I use <a href="https://code.visualstudio.com/" target="_blank">Visual
+                        Studio Code</a> for my coding projects but there are many good ones out there)</li>
+                <li>Web browser (to visualize your progress)</li>
+            </ul>
+
+            <h2>Create a Webpage and View in a Browser</h2>
+            <p>Creating a webpage is very easy (you can create one in less than two minutes!). Follow these steps:</p>
+            <ol>
+                <li>Open your text editor of choice and create a new file called <code>index.html</code>. Be sure the
+                    file extension is .html because that's how the browser identifies the file as an html.</li>
+                <li>Copy the following code into the file:</li>
+
+                <div class="code-block">
+                    <pre class="code-line">&lt;!DOCTYPE html&gt;</pre>
+                    <pre class="code-line">&lt;html&gt;</pre>
+                    <pre class="code-line">&lt;head&gt;</pre>
+                    <pre class="code-line"
+                        style="padding-left: 15px;">&lt;title&gt;My First HTML Page&lt;/title&gt;</pre>
+                    <pre class="code-line">&lt;/head&gt;</pre>
+                    <pre class="code-line">&lt;body&gt;</pre>
+                    <pre class="code-line" style="padding-left: 15px;">&lt;h1&gt;My First Page&lt;/h1&gt;</pre>
+                    <pre class="code-line"
+                        style="padding-left: 15px;">&lt;p&gt;</span>My first page in less than 2 minutes!&lt;/p&gt;</pre>
+                    <pre class="code-line">&lt;/body&gt;</pre>
+                    <pre class="code-line">&lt;/html&gt;</pre>
+                </div>
+
+                <li>Launch your browser and open up the file to see what you've created!</li>
+            </ol>
+
+            <br>
+
+            <h2>Elements</h2>
+            <p>HTML documents are composed of various elements that make up the page, and tags are used to define each
+                of those elements. We can visit our previous code snippet and break it apart:</p>
+            <ul>
+                <li><code>!DOCTYPE html</code>: a declaration that tells the browser which version of HTML you're using
+                </li>
+                <li><code>html</code>: this is considered the <i>root</i> elements because all other elements are
+                    contained within it</li>
+                <li><code>head</code>: this element contains information about the webpage that the user typically does
+                    not see (such as meta tags, CSS file location, etc.). One notable exception is the
+                    <code>Title</code> attribute, which is displayed as the tab title at the top of a browser</li>
+                <li><code>body</code>: this contains the bulk of viewable material where you'll produce all your
+                    fantastic creations!</li>
+            </ul>
+            <p>You may have noticed the <code>p</code> and <code>h1</code> tags as well. We'll take a look at those
+                later. You may have also noticed that each tag has a subbsequent closing tag with a <code>/</code>. This
+                is very important as it tells the browser the content of that element is over.</p>
+
+            <br>
+
+            <h2>Attributes</h2>
+            <p>Attributes provide more information about the aforementioned elements. They are extremely important
+                because attributes can define how the tag should behave, how it should be referenced in CSS stylesheets,
+                a hyperlink that the text should direct to, etc. Attributes are always in the start tag of an element
+                and follow the format <b>name = "value"</b>. You can also stagger multiple attributes into the same
+                element. A list of all global attributes can be found <a
+                    href="https://www.w3schools.com/tags/ref_standardattributes.asp" target="_blank">here</a>. Below is
+                a list of commonly used attributes to start off:</p>
+            <h3>href</h3>
+            <p>A hyperlink can be inserted via the <code>&lt;a&gt;</code> tag, but the actual link lives in the href
+                attribute.</p>
+            <div class="code-block">
+                <pre class="code-line">&lt;a href="www.google.com"&gt;Google&lt;/a&gt;</pre>
+            </div>
+            <h3>src</h3>
+            <p>The <code>&lt;img&gt;</code> element is used to embed an image into a page. The path of the image is
+                specified via the src attribute.</p>
+            <div class="code-block">
+                <pre class="code-line">&lt;img src="img_dog.png"&gt;</pre>
+            </div>
+            <p>Notice that there is no end tag above; image elements only have a beginning tag.</p>
+            <h3>style</h3>
+            <p>The style attribute is what's used to give some flair to the text and add some styling (discussed more
+                below). It can accommodate all the style guides used in CSS and applies only to the element that it's
+                applied on.</p>
+            <div class="code-block">
+                <pre class="code-line">&lt;p style="color: blue;"&gt;A blue paragraph&lt;/p&gt;</pre>
+            </div>
+
+            <br>
+
+            <h2>Semantics</h2>
+            <p>You may have heard of CSS, which is used to give your webpages personality (and which I'll hopefully
+                cover in another article). HTML however offers some pre-configured ways to format content without the
+                need for CSS.</p>
+
+            <h3>Headings</h3>
+            <p>There are six heading levels built-in with HTML: <code>h1</code> to <code>h6</code>, in decreasing
+                priority. Headings provide an easy way to create visual hierarchy to direct the reader's attention to
+                the most important elements first. You've already used one, but here they are in practice:</p>
+            <h1 style="margin: 15px; color: #666666" ;>Heading 1</h1>
+            <h2 style="margin: 15px; color: #666666" ;>Heading 2</h2>
+            <h3 style="margin: 15px; color: #666666" ;>Heading 3</h3>
+            <h4 style="margin: 15px; color: #666666" ;>Heading 4</h4>
+            <h5 style="margin: 15px; color: #666666" ;>Heading 5</h5>
+            <h6 style="margin: 15px; color: #666666" ;>Heading 6</h6>
+            <p>Headings can be used through tags, such as below.</p>
+            <div class="code-block">
+                <pre class="code-line">&lt;h1&gt;Hello there&lt;/h1&gt;</pre>
+            </div>
+
+            <h3>Formatting</h3>
+            <p>There are also specific ways to format your content to call out attention to any text:</p>
+            <p style="margin: 15px;"><code>&lt;i&gt;</code> - <i>italics text</i></p>
+            <p style="margin: 15px;"><code>&lt;em&gt;</code> - <em>emphasized text</em></p>
+            <p style="margin: 15px;"><code>&lt;b&gt;</code> - <b>bold text</b></p>
+            <p style="margin: 15px;"><code>&lt;strong&gt;</code> - <strong>strong/important text</strong></p>
+            <p style="margin: 15px;"><code>&lt;sub&gt;</code> - <sub>subscript text</sub></p>
+            <p style="margin: 15px;"><code>&lt;sup&gt;</code> - <sup>superscript text</sup></p>
+            <p style="margin: 15px;"><code>&lt;del&gt;</code> - <del>deleted text</del></p>
+            <p style="margin: 15px;"><code>&lt;mark&gt;</code> - <mark>marked text</mark></p>
+            <p style="margin: 15px;"><code>&lt;u&gt;</code> - <u>underlined text</u></p>
+            <p>Any of the above modifications can be used through elements:</p>
+            <div class="code-block">
+                <pre class="code-line">&lt;p&gt;Peaches are &lt;i&gt;delicious&lt;/i&gt;.&lt;/p&gt;</pre>
+            </div>
+            <p>An interesting thing to note here is the seemingly bizarre distinction between <code>i</code> and
+                <code>em</code>, and <code>b</code> and <code>strong</code>. There are coding standards that HTML uses
+                that may not necessarily create visible differences to the user, but instead serve to distinguish text
+                that is truly important (strong/em) versus text that simply needs to be called out (b/i). HTML
+                standards can be found at the WHATWG page <a href="https://html.spec.whatwg.org/"
+                    target="_blank">here</a>.</p>
+
+            <h3>Lists</h3>
+            <p>There are two main types of lists that HTML can accommodate for: ordered (numbered) and unordered
+                (bulleted) lists; however, the syntax is quite similar. Ordered lists can be invoked through the
+                <code>&lt;ol&gt;</code> tag; unordered lists can be triggered through the &lt;ul&gt; tag. Once initiated
+                however, both types of lists use the &lt;li&gt; element to instantiate each list item.</p>
+            <div class="code-block">
+                <pre class="code-line">&lt;ol&gt;</pre>
+                <pre class="code-line" style="padding-left: 15px;">&lt;li&gt;Ordered&lt;/li&gt;</pre>
+                <pre class="code-line" style="padding-left: 15px;">&lt;li&gt;List&lt;/li&gt;</pre>
+                <pre class="code-line">&lt;/ol&gt;</pre>
+                <br>
+                <pre class="code-line">&lt;ul&gt;</pre>
+                <pre class="code-line" style="padding-left: 15px;">&lt;li&gt;Unordered&lt;/li&gt;</pre>
+                <pre class="code-line" style="padding-left: 15px;">&lt;li&gt;List&lt;/li&gt;</pre>
+                <pre class="code-line">&lt;/ul&gt;</pre>
+            </div>
+
+            <br>
+
+            <h2>Styling</h2>
+            <p>HTML provides content, but it doesn't change the look and feel of the site; that's where CSS comes into
+                play. CSS stands for Cascading Style Sheets and it's a way to apply style conventions on the webpage.
+                It's extremely intuitive. For example, to set the color and size of some text, you can simply do the
+                following:</p>
+            <div class="code-block">
+                <pre class="code-line">color = green;</pre>
+                <pre class="code-line">font_size = 15px;</pre>
+            </div>
+            <p>A full list of all styling variables can be found <a href="https://www.w3schools.com/cssref/"
+                    target="_blank">here</a>
+                (there's a lot!).</p>
+            <p>There are three mainstream ways to apply styles: inline, embedded, and external.</p>
+            <h3>Inline</h3>
+            <p>Inline refers to the style guide being applied directly on the element in question, hence it's "inline"
+                with the element. This is a fast and convenient way to apply adhoc styling guides, and I mainly find
+                myself using them when I want to apply a bespoke style guide to an element (such as with the heading
+                examples above - my headings have default color black, but I wanted to make those grey). However, inline
+                styles should be used sparingly, as they can spiral into an extremely disorganized and
+                difficult-to-change system.</p>
+            <div class="code-block">
+                <pre class="code-line">&lt;p style="color=green; font-size=15px;"&gt; Inline styling &lt;/p&gt;</pre>
+            </div>
+            <p>Notice the use of semicolons and quotations to contain the style variables.</p>
+            <h3>Embedded</h3>
+            <p>Embedded style sheets are a level up when it comes to maintainability. Although the styling nouns stay
+                the same, all of them are assembled in the <code>head</code> element of the HTML page. This allows you
+                to quickly and exhaustively alter the entire page's style without much effort.</p>
+            <div class="code-block">
+                <pre class="code-line">&lt;!DOCTYPE html&gt;</pre>
+                <pre class="code-line">&lt;html&gt;</pre>
+                <pre class="code-line">&lt;head&gt;</pre>
+                <pre class="code-line" style="padding-left: 15px;">&lt;title&gt;My First HTML Page&lt;/title&gt;</pre>
+                <pre class="code-line" style="padding-left: 15px;">&lt;style&gt;</pre>
+                <pre class="code-line" style="padding-left: 30px;">body {</pre>
+                <pre class="code-line" style="padding-left: 45px;">color = green;</pre>
+                <pre class="code-line" style="padding-left: 45px;">font-size = 15px;</pre>
+                <pre class="code-line" style="padding-left: 30px;">}</pre>
+                <pre class="code-line" style="padding-left: 15px;">&lt;/style&gt;</pre>
+                <pre class="code-line">&lt;/head&gt;</pre>
+                <pre class="code-line">&lt;body&gt;</pre>
+                <pre class="code-line">...</pre>
+            </div>
+            <p>There are a couple things to note here:</p>
+            <ul>
+                <li>The <code>body</code> tag in the <code>head</code> refers to the body element below, meaning the
+                    styling that's created for body in the head will apply to the <i>entire</i> body element and
+                    everything that's in it. But what if we want more specific styling for different elements? That's
+                    ok! Styles are automatically overriden by more granular styling details.</li>
+                <li>The <code>body</code> element is specified. CSS is extremely flexible and you can reference any
+                    element by their "name". For example if I create an element with a <code>class</code> attribute of
+                    <code>ananyas-html-course</code> then I can use that in the styling guide to style all the elements
+                    within <code>ananyas-html-course</code>.</li>
+            </ul>
+            <h3>External</h3>
+            <p>External styling docs are very similar to embedded, except that they live in a .css file of their own
+                that you can directly call in the head. More info in the CSS introductory post that I'll hopefully get
+                to soon.</p>
+        </article>
+    </div>
+</body>

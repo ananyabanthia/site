@@ -1,0 +1,160 @@
+body {
+    margin: 10px;
+    padding-left: 20px;
+    padding-right: 50px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 15px;
+    line-height: 1.8em;
+    color: black;
+    letter-spacing: 0.03em;
+}
+
+p {
+    font-weight: 250;
+    color: #333333;
+    justify-content: center;
+    display: block;
+}
+
+.body-link {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.body-link:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+h1, h2, h3, h4 {
+    color: black;
+}
+
+.container {
+    padding: 40px;
+    padding-top: 10px;
+    margin: auto;
+    max-width: 800px;
+}
+
+.navigation-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    
+    padding-bottom: 20px;
+    margin: auto;
+    margin-top: 50px;
+    max-width: 800px;
+}
+
+.left {
+    display: flex;
+    position: relative;
+    padding-top: 15px;
+}
+
+.navigation-wrapper > .left > div {
+    margin-right: 20px;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: .05em; 
+    line-height: 1em;
+}
+
+.nav-link-wrapper {
+    height: 20px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom .5s;
+}
+
+.nav-link-wrapper a {
+    color: #979696;
+    text-decoration: none;
+    transition: color .5s;
+}
+
+.nav-link-wrapper:hover {
+    border-bottom: 1px solid black;
+}
+
+.nav-link-wrapper a:hover {
+    border-bottom: black;
+    color: black;
+}
+
+.nav-link-wrapper .active {
+    border-bottom: black;
+    color: black;
+}
+
+.right {
+    font-weight: 800;
+    font-size: 30px;
+    padding: 0px;
+    color: black;
+}
+
+.about-wrapper {
+    display: flex;
+}
+
+.about-text{
+    margin-right: 40px;
+    width: 600px;
+}
+
+.contact {
+    padding-left: 40px;
+}
+
+.code-block {
+    color: white;
+    background-color: grey;
+    line-height: 1em;
+    width: 775px;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 10px;
+}
+
+.learning-article {
+    margin: 0px auto;
+    max-width: 800px;
+}
+
+.li {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 15px;
+    line-height: 1.8em;
+    letter-spacing: 0.03em;
+    font-weight: 250;
+    color: #333333;
+}
+
+.project-sub-section {
+    font-weight: 250;
+    color: #333333;
+    justify-content: center;
+    display: block;
+    line-height: 2em;
+}
+
+.post {
+    margin: 0px auto;
+    max-width: 800px;
+}
+
+.heading {
+    text-align: center;
+    padding-bottom:10px;
+}
