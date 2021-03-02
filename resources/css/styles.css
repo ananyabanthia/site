@@ -1,7 +1,6 @@
 body {
     margin: 10px;
-    padding-left: 20px;
-    padding-right: 50px;
+    margin-left: 250px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 15px;
     line-height: 1.8em;
@@ -26,31 +25,20 @@ p {
     color: black;
 }
 
-a:visited {
-    text-decoration: none;
-    color: black;
-}
-
-h1, h2, h3, h4 {
-    color: black;
-}
-
 .container {
     padding: 40px;
-    padding-top: 10px;
-    margin: auto;
-    max-width: 800px;
+    padding-top: 5px;
+    max-width: 500px;
 }
 
 .navigation-wrapper {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    
-    padding-bottom: 20px;
-    margin: auto;
-    margin-top: 50px;
-    max-width: 800px;
+    padding-left: 40px;
+    margin-top: 30px;
+    max-width: 500px;
+    text-align: center;
 }
 
 .left {
@@ -103,17 +91,9 @@ h1, h2, h3, h4 {
     color: black;
 }
 
-.about-wrapper {
-    display: flex;
-}
-
-.about-text{
-    margin-right: 40px;
-    width: 600px;
-}
-
-.contact {
-    padding-left: 40px;
+.title {
+    padding-top: 20px;
+    font-family: 'saira', sans-serif;
 }
 
 .code-block {
@@ -125,11 +105,6 @@ h1, h2, h3, h4 {
     padding-top: 5px;
     padding-bottom: 5px;
     margin: 10px;
-}
-
-.learning-article {
-    margin: 0px auto;
-    max-width: 800px;
 }
 
 .li {
@@ -150,8 +125,34 @@ h1, h2, h3, h4 {
 }
 
 .post {
-    margin: 0px auto;
     max-width: 800px;
+}
+
+.post-title {
+    font-weight: 250;
+    color: #333333;
+    justify-content: center;
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.post-date {
+    display: inline-block;
+    font-size: 12px;
+    color: grey;
+    font-weight: 300;
+    font-family: 'saira', sans-serif;
+}
+
+.post-w-date {
+    padding-bottom: 5px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom .5s;
+    text-decoration: none;
+}
+
+.post-w-date:hover {
+    border-bottom: 1px solid black;
 }
 
 .heading {
